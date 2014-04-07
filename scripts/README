@@ -1,0 +1,19 @@
+
+- The server is written in go, and serves JSON via RESTful interface
+- VirtualBox crunchbang-2 is setup with this
+
+- NAT forwarding can be setup by running
+
+VBoxManage modifyvm crunchbang-2 --natpf1 "swimsrv,tcp,127.0.0.1,28000,,8000"a
+
+8000 - port on which the server runs in the VM
+28000 - port in localhost
+
+
+VBoxManage showvminfo crunchbang-2 | less
+
+Displays info about the vm
+
+NOTE: VM needs to be shut-down to make this change
+
+
