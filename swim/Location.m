@@ -18,10 +18,23 @@
         _place = [jsonDictionary objectForKey:@"place"];
         _information = [jsonDictionary objectForKey:@"information"];
         _telephone = [jsonDictionary objectForKey:@"telephone"];
-        _latitude = [jsonDictionary objectForKey:@"latitude"];
-        _longitude = [jsonDictionary objectForKey:@"longitude"];
+        
+        NSNumber *latitude = [jsonDictionary objectForKey:@"latitude"];
+        NSNumber *longitude = [jsonDictionary objectForKey:@"longitude"];
+        _coordinate = CLLocationCoordinate2DMake([latitude doubleValue], [longitude doubleValue]);
+        
         _url = [jsonDictionary objectForKey:@"url"];
         _visited = [jsonDictionary objectForKey:@"visited"];
+        
+        _address = [jsonDictionary objectForKey:@"address"];
+        _region = [jsonDictionary objectForKey:@"region"];
+        
+        NSArray *array;
+        array = [jsonDictionary objectForKey:@"tags"];
+        _tags = [[NSMutableArray alloc] init];
+        for (NSString *str in array) {
+            [_tags addObject:str];
+        }
     }
     
     return self;

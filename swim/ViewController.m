@@ -8,14 +8,27 @@
 
 #import "ViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
-
-@interface ViewController ()
-
-@end
+#import "LocationLoader.h"
 
 @implementation ViewController {
     GMSMapView *mapView_;
     BOOL firstLocationUpdate_;
+    NSArray *_locations;
+}
+
+- (void) createMarker:(Location *)loc
+{
+    GMSMarker *marker = [GMSMarker markerWithPosition:loc.coordinate];
+    marker.title = loc.title;
+    marker.tappable = YES;
+    marker.map = mapView_;
+}
+
+- (void)createMarkers
+{
+    for (Location *loc in _locations) {
+        [self createMarker:loc];
+    }
 }
 
 - (void)viewDidLoad
@@ -41,7 +54,13 @@
     // ask location data after it is added to gui
     dispatch_async(dispatch_get_main_queue(), ^{
         mapView_.myLocationEnabled = YES;
+    
+        LocationLoader *locLoader = [[LocationLoader alloc] init];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"burnaby" withExtension:@"json"];
+        _locations = [locLoader locationsFromJSONFile:url];
+        [self createMarkers];
     });
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

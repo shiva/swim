@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581516C518F209CD00AE34B6 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 581516C418F209CD00AE34B6 /* locations.json */; };
+		581516C618F209CD00AE34B6 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 581516C418F209CD00AE34B6 /* locations.json */; };
+		581516C918F20AA400AE34B6 /* LocationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 581516C818F20AA400AE34B6 /* LocationLoader.m */; };
+		581516CA18F20AA400AE34B6 /* LocationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 581516C818F20AA400AE34B6 /* LocationLoader.m */; };
+		581516CD18F20C3600AE34B6 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 581516CC18F20C3600AE34B6 /* Location.m */; };
+		581516CE18F20C3600AE34B6 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 581516CC18F20C3600AE34B6 /* Location.m */; };
+		581516D018F21DE500AE34B6 /* burnaby.json in Resources */ = {isa = PBXBuildFile; fileRef = 581516CF18F21DE500AE34B6 /* burnaby.json */; };
+		581516D118F21DE500AE34B6 /* burnaby.json in Resources */ = {isa = PBXBuildFile; fileRef = 581516CF18F21DE500AE34B6 /* burnaby.json */; };
 		58ED064418E7B434002CC137 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ED064318E7B434002CC137 /* Foundation.framework */; };
 		58ED064618E7B434002CC137 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ED064518E7B434002CC137 /* CoreGraphics.framework */; };
 		58ED064818E7B434002CC137 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ED064718E7B434002CC137 /* UIKit.framework */; };
@@ -51,6 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		581516C418F209CD00AE34B6 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		581516C718F20AA400AE34B6 /* LocationLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationLoader.h; sourceTree = "<group>"; };
+		581516C818F20AA400AE34B6 /* LocationLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationLoader.m; sourceTree = "<group>"; };
+		581516CB18F20C3600AE34B6 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		581516CC18F20C3600AE34B6 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		581516CF18F21DE500AE34B6 /* burnaby.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = burnaby.json; sourceTree = "<group>"; };
 		58ED064018E7B434002CC137 /* swim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED064318E7B434002CC137 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		58ED064518E7B434002CC137 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +194,12 @@
 				58ED065C18E7B434002CC137 /* ViewController.m */,
 				58ED065E18E7B434002CC137 /* Images.xcassets */,
 				58ED064A18E7B434002CC137 /* Supporting Files */,
+				581516C418F209CD00AE34B6 /* locations.json */,
+				581516CF18F21DE500AE34B6 /* burnaby.json */,
+				581516C718F20AA400AE34B6 /* LocationLoader.h */,
+				581516C818F20AA400AE34B6 /* LocationLoader.m */,
+				581516CB18F20C3600AE34B6 /* Location.h */,
+				581516CC18F20C3600AE34B6 /* Location.m */,
 			);
 			path = swim;
 			sourceTree = "<group>";
@@ -290,9 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ED065A18E7B434002CC137 /* Main_iPad.storyboard in Resources */,
+				581516D018F21DE500AE34B6 /* burnaby.json in Resources */,
 				58ED065F18E7B434002CC137 /* Images.xcassets in Resources */,
 				58ED065718E7B434002CC137 /* Main_iPhone.storyboard in Resources */,
 				58ED064E18E7B434002CC137 /* InfoPlist.strings in Resources */,
+				581516C518F209CD00AE34B6 /* locations.json in Resources */,
 				58ED067F18E7B49D002CC137 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ED067018E7B434002CC137 /* InfoPlist.strings in Resources */,
+				581516C618F209CD00AE34B6 /* locations.json in Resources */,
 				58ED068018E7B49D002CC137 /* GoogleMaps.bundle in Resources */,
+				581516D118F21DE500AE34B6 /* burnaby.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ED065D18E7B434002CC137 /* ViewController.m in Sources */,
+				581516CD18F20C3600AE34B6 /* Location.m in Sources */,
 				58ED065418E7B434002CC137 /* AppDelegate.m in Sources */,
 				58ED065018E7B434002CC137 /* main.m in Sources */,
+				581516C918F20AA400AE34B6 /* LocationLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ED067218E7B434002CC137 /* swimTests.m in Sources */,
+				581516CE18F20C3600AE34B6 /* Location.m in Sources */,
+				581516CA18F20AA400AE34B6 /* LocationLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +487,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "swim/swim-Prefix.pch";
 				INFOPLIST_FILE = "swim/swim-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,6 +505,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "swim/swim-Prefix.pch";
 				INFOPLIST_FILE = "swim/swim-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -542,6 +572,7 @@
 				58ED067718E7B434002CC137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58ED067818E7B434002CC137 /* Build configuration list for PBXNativeTarget "swimTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +581,7 @@
 				58ED067A18E7B434002CC137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
